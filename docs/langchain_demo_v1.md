@@ -1,23 +1,26 @@
 This files aims to demonstrate how to use LangChain by showing most of its features.
 
-It will utilize the DCDClient as tools and ZHIPU as model to demonstrate the use of LangChain.
+It will utilize ZHIPU as model to demonstrate the use of LangChain.
 
 It will include some unnessary functions to show langchain's features.
 
 I expect to attach some explainations with the code to make it easier to understand.
 
-#### Model
+这个文件旨在演示如何使用LangChain，并展示其功能。在文件中，将使用zhipu作为模型。
 
-##### - Simple agent that only include model 
+#### 模型 Model
+
+##### 单模型langchain (Simple agent that only include model)
 
 Agent is the core of LangChain, it is responsible for managing the conversation and calling tools. 
 
 Agent includes interactions with models, tools, structure, memory, and prompts.
 
-
 Model is the key part of an agent. As shown below, the model can be easily used to generate text.
 
+langchain的核心是agent，它可用于交互和调用工具。Agent包含模型，工具，结构，记忆和提示词之间的交互。
 
+模型是agent的关键部分。如下所示，可以轻松地使用模型生成文本。
 
 
 ```python
@@ -80,7 +83,7 @@ for i, res in enumerate(response):
     
     
 
-#### Output Format
+#### 输出整型 Output Format
 
 You may choose the output format you prefer or desgin your own output format.
 
@@ -155,7 +158,7 @@ print(response)
 
 Using JsonOutputParser requires your output to be a valid JSON string. You will need to use system prompt or mention in your prompt that the output should be a JSON string.
 
-#### Tools
+#### 工具 Tools
 
 add tools through @tool decorator
 
@@ -262,7 +265,7 @@ print(final_response.content)
     《肖申克的救赎》的正面评论主要围绕着**希望、自由、坚持、友谊和人性尊严**这几个核心主题展开。电影通过一个看似绝望的故事，向观众展示了人性中最美好的一面，给予人们面对困境的勇气和力量，这就是它能引起广泛共鸣并获得高度评价的根本原因。
     
 
-#### Agent
+#### 智能体 Agent
 
 now we are familiar with tools, models, and output parser. Agent helps us to combine them to solve complex problems. 
 
@@ -294,7 +297,7 @@ agent = create_agent(
 ```
 
 
-#### Middleware 
+#### 中间件 Middleware 
 
 
 
